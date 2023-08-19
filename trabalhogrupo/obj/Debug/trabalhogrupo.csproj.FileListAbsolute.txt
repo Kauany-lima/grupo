@@ -1,0 +1,14 @@
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\bin\Debug\trabalhogrupo.exe.config
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\bin\Debug\trabalhogrupo.exe
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\bin\Debug\trabalhogrupo.pdb
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.csproj.AssemblyReference.cache
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.csproj.SuggestedBindingRedirects.cache
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.Properties.Resources.resources
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.csproj.GenerateResource.cache
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.csproj.CoreCompileInputs.cache
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.exe
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.pdb
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.Cadastrar.resources
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.Login.resources
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.RegistroVenda.resources
+C:\Users\claud\source\repos\trabalhogrupo\trabalhogrupo\obj\Debug\trabalhogrupo.Venda.resources
