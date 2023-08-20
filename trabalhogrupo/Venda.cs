@@ -20,21 +20,25 @@ namespace trabalhogrupo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Vendaproduto venda = new Vendaproduto();
-            venda.Id = tx_id1.Text;
-            venda.Descricao = tx_descricao2.Text;
-            venda.Marca = tx_marca3.Text;
-            venda.Tamanho = tx_tamanho4.Text;
-            venda.Valor = Convert.ToDouble(tx_valor5.Text);
-            venda.Desconto = Convert.ToDouble(tx_valor5.Text);
-            venda.Data = tx_data7.Text;
-            tx_valorfinal.Text = Convert.ToString(venda.Valor + (venda.Valor * venda.Desconto/100));
-            vendaList.Add(venda);
-
-            dataGridView1.DataSource = null;
-            dataGridView1.Refresh();
-            dataGridView1.DataSource = venda;
-
+            
+            
+                Vendaproduto venda = new Vendaproduto();
+              
+                venda.Id = tx_id1.Text;
+                venda.Descricao = tx_descricao2.Text;
+                venda.Marca = tx_marca3.Text;
+                venda.Tamanho = tx_tamanho4.Text;
+                venda.Valor = Convert.ToDouble(tx_valor5.Text);
+                venda.Desconto = Convert.ToDouble(tx_desconto6.Text);
+                venda.Data = tx_data7.Text;
+                double calculoquant = venda .Valor * Convert.ToDouble(textBox1.Text) ;
+                venda.Quantidade = Convert.ToDouble(textBox1.Text);
+                venda.Valorfinal = calculoquant - ((calculoquant * venda.Desconto) / (100));
+                vendaList.Add(venda);
+                               
+                dataGridView1.DataSource = null;
+                dataGridView1.Refresh();
+                dataGridView1.DataSource = vendaList;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -48,9 +52,19 @@ namespace trabalhogrupo
             tx_data7.Clear();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+      
+        private void button3_Click_1(object sender, EventArgs e)
         {
+            Login login = new Login();
+            login.ShowDialog();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+            }
         }
     }
 }

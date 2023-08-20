@@ -12,6 +12,7 @@ namespace trabalhogrupo
 {
     public partial class Login : Form
     {
+        List <Usuario> list = new List<Usuario>();
         public Login()
         {
             InitializeComponent();
@@ -19,14 +20,22 @@ namespace trabalhogrupo
 
         private void tx_entrar_Click(object sender, EventArgs e)
         {
-            Venda venda = new Venda();
+           
+            Usuario usuario = new Usuario(textBox1.Text, maskedTextBox1.Text);
+            list.Add(usuario);
+
+            Venda venda = new Venda();  
             venda.ShowDialog();
+            
+           
+            
         }
 
         private void tx_cadastrar_Click(object sender, EventArgs e)
         {
-            Cadastrar cadastrar = new Cadastrar();
-            cadastrar.ShowDialog();
+            maskedTextBox1.Clear();
+            textBox1.Clear();
+            
         }
     }
 }

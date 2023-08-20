@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastrar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastrar.Designer.cs">
-      <DependentUpon>Cadastrar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,21 +56,12 @@
     <Compile Include="Produtocs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistroVenda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistroVenda.Designer.cs">
-      <DependentUpon>RegistroVenda.cs</DependentUpon>
-    </Compile>
     <Compile Include="Venda.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Venda.Designer.cs">
       <DependentUpon>Venda.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cadastrar.resx">
-      <DependentUpon>Cadastrar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,10 +73,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegistroVenda.resx">
-      <DependentUpon>RegistroVenda.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Venda.resx">
       <DependentUpon>Venda.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loja....jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -45,59 +45,70 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tx_valorfinal = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 95);
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(58, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 16);
+            this.label1.Size = new System.Drawing.Size(27, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(70, 135);
+            this.label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(58, 112);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(69, 16);
+            this.label.Size = new System.Drawing.Size(91, 21);
             this.label.TabIndex = 1;
             this.label.Text = "Descrição";
             // 
             // tx_marca
             // 
             this.tx_marca.AutoSize = true;
-            this.tx_marca.Location = new System.Drawing.Point(75, 172);
+            this.tx_marca.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tx_marca.Location = new System.Drawing.Point(58, 161);
             this.tx_marca.Name = "tx_marca";
-            this.tx_marca.Size = new System.Drawing.Size(45, 16);
+            this.tx_marca.Size = new System.Drawing.Size(62, 21);
             this.tx_marca.TabIndex = 2;
             this.tx_marca.Text = "Marca";
             // 
             // tx_valor
             // 
             this.tx_valor.AutoSize = true;
-            this.tx_valor.Location = new System.Drawing.Point(489, 95);
+            this.tx_valor.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tx_valor.Location = new System.Drawing.Point(458, 66);
             this.tx_valor.Name = "tx_valor";
-            this.tx_valor.Size = new System.Drawing.Size(39, 16);
+            this.tx_valor.Size = new System.Drawing.Size(56, 21);
             this.tx_valor.TabIndex = 3;
             this.tx_valor.Text = "Valor";
             // 
             // tx_desconto
             // 
             this.tx_desconto.AutoSize = true;
-            this.tx_desconto.Location = new System.Drawing.Point(489, 132);
+            this.tx_desconto.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tx_desconto.Location = new System.Drawing.Point(458, 112);
             this.tx_desconto.Name = "tx_desconto";
-            this.tx_desconto.Size = new System.Drawing.Size(65, 16);
+            this.tx_desconto.Size = new System.Drawing.Size(86, 21);
             this.tx_desconto.TabIndex = 4;
             this.tx_desconto.Text = "Desconto";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(109, 250);
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(62, 285);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(94, 32);
             this.button1.TabIndex = 5;
             this.button1.Text = "Salvar ";
             this.button1.UseVisualStyleBackColor = true;
@@ -105,9 +116,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(248, 259);
+            this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(265, 285);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(93, 32);
             this.button2.TabIndex = 6;
             this.button2.Text = "Novo";
             this.button2.UseVisualStyleBackColor = true;
@@ -122,87 +134,143 @@
             "M",
             "G",
             "GG",
-            "XGG"});
-            this.tx_tamanho4.Location = new System.Drawing.Point(73, 208);
+            "XXG",
+            "XXXG"});
+            this.tx_tamanho4.Location = new System.Drawing.Point(151, 200);
             this.tx_tamanho4.Name = "tx_tamanho4";
-            this.tx_tamanho4.Size = new System.Drawing.Size(121, 24);
+            this.tx_tamanho4.Size = new System.Drawing.Size(116, 24);
             this.tx_tamanho4.TabIndex = 8;
             // 
             // tx_id1
             // 
-            this.tx_id1.Location = new System.Drawing.Point(109, 88);
+            this.tx_id1.Location = new System.Drawing.Point(91, 69);
             this.tx_id1.Name = "tx_id1";
-            this.tx_id1.Size = new System.Drawing.Size(100, 22);
+            this.tx_id1.Size = new System.Drawing.Size(122, 22);
             this.tx_id1.TabIndex = 9;
             // 
             // tx_descricao2
             // 
-            this.tx_descricao2.Location = new System.Drawing.Point(151, 132);
+            this.tx_descricao2.Location = new System.Drawing.Point(155, 113);
             this.tx_descricao2.Name = "tx_descricao2";
-            this.tx_descricao2.Size = new System.Drawing.Size(100, 22);
+            this.tx_descricao2.Size = new System.Drawing.Size(186, 22);
             this.tx_descricao2.TabIndex = 10;
             // 
             // tx_marca3
             // 
-            this.tx_marca3.Location = new System.Drawing.Point(142, 172);
+            this.tx_marca3.Location = new System.Drawing.Point(139, 162);
             this.tx_marca3.Name = "tx_marca3";
-            this.tx_marca3.Size = new System.Drawing.Size(100, 22);
+            this.tx_marca3.Size = new System.Drawing.Size(202, 22);
             this.tx_marca3.TabIndex = 11;
             // 
             // tx_desconto6
             // 
-            this.tx_desconto6.Location = new System.Drawing.Point(561, 132);
+            this.tx_desconto6.Location = new System.Drawing.Point(561, 113);
             this.tx_desconto6.Name = "tx_desconto6";
-            this.tx_desconto6.Size = new System.Drawing.Size(100, 22);
+            this.tx_desconto6.Size = new System.Drawing.Size(147, 22);
             this.tx_desconto6.TabIndex = 12;
             // 
             // tx_data7
             // 
-            this.tx_data7.Location = new System.Drawing.Point(535, 187);
+            this.tx_data7.Location = new System.Drawing.Point(535, 162);
             this.tx_data7.Mask = "00/00/0000";
             this.tx_data7.Name = "tx_data7";
-            this.tx_data7.Size = new System.Drawing.Size(100, 22);
+            this.tx_data7.Size = new System.Drawing.Size(158, 22);
             this.tx_data7.TabIndex = 13;
             // 
             // tx_valor5
             // 
-            this.tx_valor5.Location = new System.Drawing.Point(535, 88);
+            this.tx_valor5.Location = new System.Drawing.Point(535, 67);
             this.tx_valor5.Name = "tx_valor5";
-            this.tx_valor5.Size = new System.Drawing.Size(126, 22);
+            this.tx_valor5.Size = new System.Drawing.Size(193, 22);
             this.tx_valor5.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(489, 187);
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(458, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 16);
+            this.label2.Size = new System.Drawing.Size(48, 21);
             this.label2.TabIndex = 15;
             this.label2.Text = "Data";
             // 
             // tx_valorfinal
             // 
-            this.tx_valorfinal.Location = new System.Drawing.Point(561, 250);
+            this.tx_valorfinal.Location = new System.Drawing.Point(666, 234);
             this.tx_valorfinal.Name = "tx_valorfinal";
-            this.tx_valorfinal.Size = new System.Drawing.Size(100, 22);
+            this.tx_valorfinal.Size = new System.Drawing.Size(120, 22);
             this.tx_valorfinal.TabIndex = 16;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 297);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 323);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(803, 204);
+            this.dataGridView1.Size = new System.Drawing.Size(994, 237);
             this.dataGridView1.TabIndex = 17;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(58, 203);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 21);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Tamanho";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(557, 235);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 21);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Valor Total";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(480, 285);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(81, 32);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "Voltar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(41, 241);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 21);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Quantidade";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(151, 240);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(33, 22);
+            this.textBox1.TabIndex = 23;
             // 
             // Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 513);
+            this.BackColor = System.Drawing.Color.MistyRose;
+            this.ClientSize = new System.Drawing.Size(1046, 572);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tx_valorfinal);
             this.Controls.Add(this.label2);
@@ -247,5 +315,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tx_valorfinal;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
