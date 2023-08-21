@@ -39,7 +39,6 @@
             this.tx_id1 = new System.Windows.Forms.TextBox();
             this.tx_descricao2 = new System.Windows.Forms.TextBox();
             this.tx_marca3 = new System.Windows.Forms.TextBox();
-            this.tx_desconto6 = new System.Windows.Forms.TextBox();
             this.tx_data7 = new System.Windows.Forms.MaskedTextBox();
             this.tx_valor5 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tx_desconto6 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,13 +162,6 @@
             this.tx_marca3.Size = new System.Drawing.Size(202, 22);
             this.tx_marca3.TabIndex = 11;
             // 
-            // tx_desconto6
-            // 
-            this.tx_desconto6.Location = new System.Drawing.Point(561, 113);
-            this.tx_desconto6.Name = "tx_desconto6";
-            this.tx_desconto6.Size = new System.Drawing.Size(147, 22);
-            this.tx_desconto6.TabIndex = 12;
-            // 
             // tx_data7
             // 
             this.tx_data7.Location = new System.Drawing.Point(535, 162);
@@ -197,9 +190,11 @@
             // tx_valorfinal
             // 
             this.tx_valorfinal.Location = new System.Drawing.Point(666, 234);
+            this.tx_valorfinal.MaxLength = 100;
             this.tx_valorfinal.Name = "tx_valorfinal";
             this.tx_valorfinal.Size = new System.Drawing.Size(120, 22);
             this.tx_valorfinal.TabIndex = 16;
+            this.tx_valorfinal.TextChanged += new System.EventHandler(this.tx_valorfinal_TextChanged);
             // 
             // dataGridView1
             // 
@@ -260,6 +255,13 @@
             this.textBox1.Size = new System.Drawing.Size(33, 22);
             this.textBox1.TabIndex = 23;
             // 
+            // tx_desconto6
+            // 
+            this.tx_desconto6.Location = new System.Drawing.Point(561, 113);
+            this.tx_desconto6.Name = "tx_desconto6";
+            this.tx_desconto6.Size = new System.Drawing.Size(147, 22);
+            this.tx_desconto6.TabIndex = 12;
+            // 
             // Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -309,7 +311,6 @@
         private System.Windows.Forms.TextBox tx_id1;
         private System.Windows.Forms.TextBox tx_descricao2;
         private System.Windows.Forms.TextBox tx_marca3;
-        private System.Windows.Forms.TextBox tx_desconto6;
         private System.Windows.Forms.MaskedTextBox tx_data7;
         private System.Windows.Forms.TextBox tx_valor5;
         private System.Windows.Forms.Label label2;
@@ -320,5 +321,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tx_desconto6;
     }
 }

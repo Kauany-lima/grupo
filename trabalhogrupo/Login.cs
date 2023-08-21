@@ -21,7 +21,8 @@ namespace trabalhogrupo
         private void tx_entrar_Click(object sender, EventArgs e)
         {
            
-            Usuario usuario = new Usuario(textBox1.Text, maskedTextBox1.Text);
+            Usuario usuario = new Usuario();
+          
             list.Add(usuario);
 
             Venda venda = new Venda();  

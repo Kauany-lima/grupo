@@ -1,5 +1,6 @@
 ﻿public class Vendaproduto
 {
+    public string CPF { get; set; }
     public string Id { get; set; }
     public string Descricao { get; set; }
     public string Marca { get; set; }
