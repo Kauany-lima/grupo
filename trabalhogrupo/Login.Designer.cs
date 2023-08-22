@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tx_entrar = new System.Windows.Forms.Button();
             this.tx_apagar = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.tx_cpf = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tx_nome = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +44,7 @@
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(198, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 36);
+            this.label1.Size = new System.Drawing.Size(95, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             // 
@@ -70,13 +70,13 @@
             this.tx_apagar.UseVisualStyleBackColor = true;
             this.tx_apagar.Click += new System.EventHandler(this.tx_cadastrar_Click);
             // 
-            // maskedTextBox1
+            // tx_cpf
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(145, 166);
-            this.maskedTextBox1.Mask = "000.000.000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(171, 22);
-            this.maskedTextBox1.TabIndex = 3;
+            this.tx_cpf.Location = new System.Drawing.Point(145, 166);
+            this.tx_cpf.Mask = "000,000,000-00";
+            this.tx_cpf.Name = "tx_cpf";
+            this.tx_cpf.Size = new System.Drawing.Size(171, 22);
+            this.tx_cpf.TabIndex = 3;
             // 
             // label2
             // 
@@ -100,12 +100,12 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Nome";
             // 
-            // textBox1
+            // tx_nome
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 22);
-            this.textBox1.TabIndex = 6;
+            this.tx_nome.Location = new System.Drawing.Point(145, 118);
+            this.tx_nome.Name = "tx_nome";
+            this.tx_nome.Size = new System.Drawing.Size(204, 22);
+            this.tx_nome.TabIndex = 6;
             // 
             // Login
             // 
@@ -115,15 +115,16 @@
             this.BackgroundImage = global::trabalhogrupo.Properties.Resources.loja___;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(560, 493);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tx_nome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.tx_cpf);
             this.Controls.Add(this.tx_apagar);
             this.Controls.Add(this.tx_entrar);
             this.Controls.Add(this.label1);
             this.Name = "Login";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,10 +135,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button tx_entrar;
         private System.Windows.Forms.Button tx_apagar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox tx_cpf;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tx_nome;
     }
 }
 

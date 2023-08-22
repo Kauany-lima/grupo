@@ -1,5 +1,5 @@
 ﻿using System;
-
+//classe para cadastro de pessoa
 public class Usuario
 {
     
@@ -10,4 +10,5 @@ public class Usuario
     {
        
     }
+
 }

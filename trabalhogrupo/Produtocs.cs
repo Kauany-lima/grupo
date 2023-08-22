@@ -1,6 +1,9 @@
-﻿public class Vendaproduto
+﻿using System.Windows.Forms;
+using trabalhogrupo;
+
+public class Vendaproduto
 {
-    public string CPF { get; set; }
+    // classe para cadastrar o produto
     public string Id { get; set; }
     public string Descricao { get; set; }
     public string Marca { get; set; }
@@ -15,4 +18,6 @@
     {
 
     }
+   
+    
 }

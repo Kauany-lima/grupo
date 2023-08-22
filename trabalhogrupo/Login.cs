@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,23 +21,42 @@ namespace trabalhogrupo
 
         private void tx_entrar_Click(object sender, EventArgs e)
         {
-           
-            Usuario usuario = new Usuario();
-          
-            list.Add(usuario);
+            try
+            {
 
-            Venda venda = new Venda();  
-            venda.ShowDialog();
+
+                CPF cpf = new CPF();
+                bool retornooV = cpf.Validadigito(tx_cpf.Text, tx_nome.Text);
+                if (retornooV == true)
+                {
+                    Usuario usuario = new Usuario();
+                    list.Add(usuario);
+                    Venda venda = new Venda();
+                    venda.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Preencha todos os campos corretamente!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Preencha todos os campos corretamente!" + ex.Message);
+            }
             
-           
-            
+        
         }
 
         private void tx_cadastrar_Click(object sender, EventArgs e)
         {
-            maskedTextBox1.Clear();
-            textBox1.Clear();
+            tx_cpf.Clear();
+            tx_nome.Clear();
             
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

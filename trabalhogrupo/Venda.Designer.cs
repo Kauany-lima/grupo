@@ -48,8 +48,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tx_quantidade = new System.Windows.Forms.TextBox();
             this.tx_desconto6 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,9 +90,9 @@
             this.tx_valor.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tx_valor.Location = new System.Drawing.Point(458, 66);
             this.tx_valor.Name = "tx_valor";
-            this.tx_valor.Size = new System.Drawing.Size(56, 21);
+            this.tx_valor.Size = new System.Drawing.Size(149, 21);
             this.tx_valor.TabIndex = 3;
-            this.tx_valor.Text = "Valor";
+            this.tx_valor.Text = "Valor da unidade";
             // 
             // tx_desconto
             // 
@@ -172,9 +173,9 @@
             // 
             // tx_valor5
             // 
-            this.tx_valor5.Location = new System.Drawing.Point(535, 67);
+            this.tx_valor5.Location = new System.Drawing.Point(613, 65);
             this.tx_valor5.Name = "tx_valor5";
-            this.tx_valor5.Size = new System.Drawing.Size(193, 22);
+            this.tx_valor5.Size = new System.Drawing.Size(135, 22);
             this.tx_valor5.TabIndex = 14;
             // 
             // label2
@@ -189,12 +190,12 @@
             // 
             // tx_valorfinal
             // 
+            this.tx_valorfinal.Enabled = false;
             this.tx_valorfinal.Location = new System.Drawing.Point(666, 234);
             this.tx_valorfinal.MaxLength = 100;
             this.tx_valorfinal.Name = "tx_valorfinal";
             this.tx_valorfinal.Size = new System.Drawing.Size(120, 22);
             this.tx_valorfinal.TabIndex = 16;
-            this.tx_valorfinal.TextChanged += new System.EventHandler(this.tx_valorfinal_TextChanged);
             // 
             // dataGridView1
             // 
@@ -202,6 +203,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(31, 323);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(994, 237);
@@ -248,19 +250,31 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Quantidade";
             // 
-            // textBox1
+            // tx_quantidade
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 240);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(33, 22);
-            this.textBox1.TabIndex = 23;
+            this.tx_quantidade.Location = new System.Drawing.Point(151, 240);
+            this.tx_quantidade.Name = "tx_quantidade";
+            this.tx_quantidade.Size = new System.Drawing.Size(33, 22);
+            this.tx_quantidade.TabIndex = 23;
             // 
             // tx_desconto6
             // 
             this.tx_desconto6.Location = new System.Drawing.Point(561, 113);
             this.tx_desconto6.Name = "tx_desconto6";
-            this.tx_desconto6.Size = new System.Drawing.Size(147, 22);
+            this.tx_desconto6.Size = new System.Drawing.Size(144, 22);
             this.tx_desconto6.TabIndex = 12;
+           // this.tx_desconto6.TextChanged += new System.EventHandler(this.tx_desconto6_TextChanged);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(640, 285);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(80, 32);
+            this.button4.TabIndex = 24;
+            this.button4.Text = "Excluir";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Venda
             // 
@@ -268,7 +282,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1046, 572);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.tx_quantidade);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
@@ -291,6 +306,7 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.label1);
             this.Name = "Venda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venda";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -320,7 +336,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tx_quantidade;
         private System.Windows.Forms.TextBox tx_desconto6;
+        private System.Windows.Forms.Button button4;
     }
 }
