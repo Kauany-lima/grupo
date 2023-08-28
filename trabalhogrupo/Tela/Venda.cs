@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 
 namespace trabalhogrupo
 {
@@ -30,7 +30,7 @@ namespace trabalhogrupo
             {
 
 
-                // Instanciando a class venda produto e passando seus valores de acordo com o form
+                //Instanciando a classe venda produto e passando seus valores de acordo com o form
                 Vendaproduto venda = new Vendaproduto();
                 venda.Id = tx_id1.Text;
                 venda.Descricao = tx_descricao2.Text;
@@ -38,7 +38,7 @@ namespace trabalhogrupo
                 venda.Tamanho = tx_tamanho4.Text;
                 venda.Valor = Convert.ToDouble(tx_valor5.Text);
                 venda.Desconto = Convert.ToDouble(tx_desconto6.Text);
-                venda.Data = tx_data7.Text;
+                venda.Data = data_atual.Text;
                 venda.Quantidade = Convert.ToDouble(tx_quantidade.Text);
 
                 //Calculando a quantidade de determinada peça
@@ -50,50 +50,20 @@ namespace trabalhogrupo
                 vendaList.Add(venda);
 
                 //Passando para o datagridview o registro da peça de roupa
-                dataGridView1.DataSource = null;
+                Login login = new Login();
                 dataGridView1.Refresh();
                 dataGridView1.DataSource = vendaList;
-              
                 
-
-
-
-                //comando para conectar datagridview com excel
-                if (dataGridView1.Rows.Count > 0)
-                {
-                    Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
-                    Excel.Workbook xlWorkbook = xcelApp.Workbooks.Open("C:\\Users\\claud\\source\\repos\\trabalhogrupo\\01.xlsx");
-                    xcelApp.Application.Workbooks.Add(Type.Missing);
-                    for (int i = 0; i < dataGridView1.Columns.Count; i++)
-                    {
-                        xcelApp.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
-                    }
-
-                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                    {
-                        for (int j = 0; j < dataGridView1.Columns.Count; j++)
-                        {
-                            xcelApp.Cells[i + 2, j - 1] = dataGridView1.Rows[1].Cells[j].Value.ToString();
-
-                        }
-                    }
-                    xcelApp.Columns.AutoFit();
-                    xcelApp.Visible = true;
                
-                }
                
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Preencha o campo corretamente " + ex.Message);
             }
+
            
         }
-           
-         
-        
-       
-
         private void button2_Click(object sender, EventArgs e)
         {
             // remove todos os textos das lacunas para registrar uma nova peça
@@ -101,8 +71,7 @@ namespace trabalhogrupo
             tx_marca3.Clear();
             tx_valor5.Clear();
             tx_descricao2.Clear();
-            tx_desconto6.Clear();
-            tx_data7.Clear();
+            tx_desconto6.Clear();           
             tx_quantidade.Clear();  
 
         }
@@ -111,8 +80,8 @@ namespace trabalhogrupo
         private void button3_Click_1(object sender, EventArgs e)
         {
             //Voltando para area de login
-            Login login = new Login();
-            login.ShowDialog();
+            this.Close();
+          
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -122,14 +91,62 @@ namespace trabalhogrupo
             {
                 int index = dataGridView1.CurrentCell.RowIndex;
                 vendaList.RemoveAt(index);
-
-                dataGridView1.DataSource = null;
                 dataGridView1.Refresh();
                 dataGridView1.DataSource = vendaList;
             }
             catch
             {
                 Console.WriteLine("Notamos Algum erro!");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int colunas = dataGridView1.Columns.Count; //Definindo as colunas do dataggridview
+            int linhas = dataGridView1.RowCount; //definindo as linhas do datagridgview
+
+            string nome = "teste";
+
+            string texto = "";
+
+            for (int i = 0; i < linhas; i++)    //Percorre linhas
+            {
+                for (int j = 0; j < colunas; j++)   //percorre colunas
+                {
+                    var item = dataGridView1[j, i];
+
+                    if (item.Value == null)
+                    {
+                        item.Value = "";
+                    }
+
+                    texto += item.Value.ToString();
+
+                    if (j < colunas - 1)
+                    {
+
+                        texto += ";"; //as colunas é separadas por ;
+                    }
+                }
+
+                texto += "\n";
+
+            }
+
+
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\" + nome + ".csv";
+            //caminho
+
+            try
+            {
+                File.WriteAllText(path, texto);
+
+                MessageBox.Show("O arquivo foi salvo em: " + path);
+            }
+            catch (IOException error)
+            {
+                MessageBox.Show("Ocorreu um erro ao escrever arquivo: " + error.Message);
+
             }
         }
     }

@@ -23,13 +23,11 @@ namespace trabalhogrupo
         {
             try
             {
-
-
-                CPF cpf = new CPF();
-                bool retornooV = cpf.Validadigito(tx_cpf.Text, tx_nome.Text);
+                Usuario usuario = new Usuario();
+                bool retornooV = usuario.Validadigito(tx_cpf.Text, tx_nome.Text);
                 if (retornooV == true)
                 {
-                    Usuario usuario = new Usuario();
+                    
                     list.Add(usuario);
                     Venda venda = new Venda();
                     venda.ShowDialog();
@@ -41,7 +39,7 @@ namespace trabalhogrupo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Preencha todos os campos corretamente!" + ex.Message);
+                MessageBox.Show("Erro" + ex.Message);
             }
             
         
@@ -57,6 +55,18 @@ namespace trabalhogrupo
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+            cadastro.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           tabela tabela = new tabela();
+            tabela.ShowDialog();
         }
     }
 }

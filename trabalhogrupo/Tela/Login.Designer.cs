@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tx_nome = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +52,7 @@
             // tx_entrar
             // 
             this.tx_entrar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tx_entrar.Location = new System.Drawing.Point(53, 349);
+            this.tx_entrar.Location = new System.Drawing.Point(50, 358);
             this.tx_entrar.Name = "tx_entrar";
             this.tx_entrar.Size = new System.Drawing.Size(122, 46);
             this.tx_entrar.TabIndex = 1;
@@ -62,7 +63,7 @@
             // tx_apagar
             // 
             this.tx_apagar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tx_apagar.Location = new System.Drawing.Point(296, 349);
+            this.tx_apagar.Location = new System.Drawing.Point(375, 358);
             this.tx_apagar.Name = "tx_apagar";
             this.tx_apagar.Size = new System.Drawing.Size(117, 46);
             this.tx_apagar.TabIndex = 2;
@@ -107,6 +108,17 @@
             this.tx_nome.Size = new System.Drawing.Size(204, 22);
             this.tx_nome.TabIndex = 6;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(219, 358);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 46);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Cadastrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -115,6 +127,7 @@
             this.BackgroundImage = global::trabalhogrupo.Properties.Resources.loja___;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(560, 493);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tx_nome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -123,7 +136,7 @@
             this.Controls.Add(this.tx_entrar);
             this.Controls.Add(this.label1);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,7 +151,8 @@
         private System.Windows.Forms.MaskedTextBox tx_cpf;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tx_nome;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox tx_nome;
     }
 }
 

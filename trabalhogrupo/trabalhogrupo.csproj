@@ -50,24 +50,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
+    <Compile Include="Tela\tabela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Tela\tabela.Designer.cs">
+      <DependentUpon>tabela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela\Cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela\Cadastro.Designer.cs">
+      <DependentUpon>Cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="pessoa.cs" />
-    <Compile Include="Produtocs.cs" />
+    <Compile Include="Classe\pessoa.cs" />
+    <Compile Include="Classe\Produtocs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validacao.cs" />
-    <Compile Include="Venda.cs">
+    <Compile Include="Tela\Venda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Venda.Designer.cs">
+    <Compile Include="Tela\Venda.Designer.cs">
       <DependentUpon>Venda.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Tela\tabela.resx">
+      <DependentUpon>tabela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela\Cadastro.resx">
+      <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -80,13 +97,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Venda.resx">
+    <EmbeddedResource Include="Tela\Venda.resx">
       <DependentUpon>Venda.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Microsoft.Office.Interop.Excel.15.0.4795.1001.nupkg" />
-    <None Include="Microsoft.Office.Interop.Excel.15.0.4795.1001.nupkg - Atalho.lnk" />
-    <None Include="Novo%28a%29 Planilha do Microsoft Excel %282%29.xlsx" />
-    <None Include="packages.config" />
+    <None Include="Referencia\Microsoft.Office.Interop.Excel.15.0.4795.1001.nupkg" />
+    <None Include="Referencia\Microsoft.Office.Interop.Excel.15.0.4795.1001.nupkg - Atalho.lnk" />
+    <None Include="Referencia\Novo%28a%29 Planilha do Microsoft Excel %282%29.xlsx" />
+    <None Include="Referencia\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,7 +115,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Referencia\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loja....jpg" />
@@ -135,5 +152,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

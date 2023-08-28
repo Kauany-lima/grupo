@@ -39,7 +39,6 @@
             this.tx_id1 = new System.Windows.Forms.TextBox();
             this.tx_descricao2 = new System.Windows.Forms.TextBox();
             this.tx_marca3 = new System.Windows.Forms.TextBox();
-            this.tx_data7 = new System.Windows.Forms.MaskedTextBox();
             this.tx_valor5 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tx_valorfinal = new System.Windows.Forms.TextBox();
@@ -51,6 +50,8 @@
             this.tx_quantidade = new System.Windows.Forms.TextBox();
             this.tx_desconto6 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.data_atual = new System.Windows.Forms.DateTimePicker();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +119,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(265, 285);
+            this.button2.Location = new System.Drawing.Point(193, 285);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 32);
             this.button2.TabIndex = 6;
@@ -162,14 +163,6 @@
             this.tx_marca3.Name = "tx_marca3";
             this.tx_marca3.Size = new System.Drawing.Size(202, 22);
             this.tx_marca3.TabIndex = 11;
-            // 
-            // tx_data7
-            // 
-            this.tx_data7.Location = new System.Drawing.Point(535, 162);
-            this.tx_data7.Mask = "00/00/0000";
-            this.tx_data7.Name = "tx_data7";
-            this.tx_data7.Size = new System.Drawing.Size(158, 22);
-            this.tx_data7.TabIndex = 13;
             // 
             // tx_valor5
             // 
@@ -232,11 +225,11 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(480, 285);
+            this.button3.Location = new System.Drawing.Point(589, 285);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(81, 32);
             this.button3.TabIndex = 21;
-            this.button3.Text = "Voltar";
+            this.button3.Text = "Fechar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
@@ -263,12 +256,11 @@
             this.tx_desconto6.Name = "tx_desconto6";
             this.tx_desconto6.Size = new System.Drawing.Size(144, 22);
             this.tx_desconto6.TabIndex = 12;
-           // this.tx_desconto6.TextChanged += new System.EventHandler(this.tx_desconto6_TextChanged);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(640, 285);
+            this.button4.Location = new System.Drawing.Point(337, 285);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(80, 32);
             this.button4.TabIndex = 24;
@@ -276,12 +268,32 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // data_atual
+            // 
+            this.data_atual.Location = new System.Drawing.Point(513, 161);
+            this.data_atual.Name = "data_atual";
+            this.data_atual.Size = new System.Drawing.Size(273, 22);
+            this.data_atual.TabIndex = 25;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(462, 290);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(88, 27);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "Exportar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1046, 572);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.data_atual);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.tx_quantidade);
             this.Controls.Add(this.label5);
@@ -292,7 +304,6 @@
             this.Controls.Add(this.tx_valorfinal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tx_valor5);
-            this.Controls.Add(this.tx_data7);
             this.Controls.Add(this.tx_desconto6);
             this.Controls.Add(this.tx_marca3);
             this.Controls.Add(this.tx_descricao2);
@@ -327,7 +338,6 @@
         private System.Windows.Forms.TextBox tx_id1;
         private System.Windows.Forms.TextBox tx_descricao2;
         private System.Windows.Forms.TextBox tx_marca3;
-        private System.Windows.Forms.MaskedTextBox tx_data7;
         private System.Windows.Forms.TextBox tx_valor5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tx_valorfinal;
@@ -339,5 +349,7 @@
         private System.Windows.Forms.TextBox tx_quantidade;
         private System.Windows.Forms.TextBox tx_desconto6;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DateTimePicker data_atual;
+        private System.Windows.Forms.Button button5;
     }
 }
