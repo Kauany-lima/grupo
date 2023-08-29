@@ -13,7 +13,6 @@ namespace trabalhogrupo
 {
     public partial class Login : Form
     {
-        List <Usuario> list = new List<Usuario>();
         public Login()
         {
             InitializeComponent();
@@ -26,9 +25,7 @@ namespace trabalhogrupo
                 Usuario usuario = new Usuario();
                 bool retornooV = usuario.Validadigito(tx_cpf.Text, tx_nome.Text);
                 if (retornooV == true)
-                {
-                    
-                    list.Add(usuario);
+                {                                     
                     Venda venda = new Venda();
                     venda.ShowDialog();
                 }
@@ -63,10 +60,6 @@ namespace trabalhogrupo
             cadastro.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-           tabela tabela = new tabela();
-            tabela.ShowDialog();
-        }
+      
     }
 }

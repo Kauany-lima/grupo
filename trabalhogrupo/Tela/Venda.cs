@@ -47,15 +47,15 @@ namespace trabalhogrupo
 
                 //Calculando o desconto
                 venda.Valorfinal = calculoquant - ((calculoquant * venda.Desconto) / (100));
-                vendaList.Add(venda);
+
 
                 //Passando para o datagridview o registro da peça de roupa
-                Login login = new Login();
+                dataGridView1.DataSource = null;
                 dataGridView1.Refresh();
                 dataGridView1.DataSource = vendaList;
-                
-               
-               
+                vendaList.Add(venda);
+
+
             }
             catch (Exception ex)
             {
